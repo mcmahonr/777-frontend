@@ -10,7 +10,8 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/data/${category}`);
+        // const response = await axios.get(`http://localhost:5000/api/data/${category}`);
+        const response = await axios.get(`https://seven-seven-seven-30e52711822b.herokuapp.com/api/data/${category}`);
         setData(response.data.entries || []);
       } catch (error) {
         console.error('Error fetching data:', error);
